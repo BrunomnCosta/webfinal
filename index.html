@@ -1,0 +1,810 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabalho Final de Interfaces e Tecnologias Web</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--  ---------------------------------------font awesome cdn link-----------------------------------  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ----------------------------------------custom css file link------------------------------->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    </head>
+    <body>
+        <!--header section start-->
+
+        <header class="header">
+                <div class="header-1">
+
+                <a href="" class="logo"><i class="fas fa-book">ESTlibrary</i></a>
+
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="search here..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+
+                <div class="icons">
+                    <div id="search-btn" class="fas fa-search"></div>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <div id="login-btn" class="fas fa-user"></div>
+                </div>
+            </div>
+
+            <div class="header-2">
+                <nav class="navbar">
+                    <a href="#home">home</a>
+                    <a href="#featured">featured</a>
+                    <a href="#arrivals">arrivals</a>
+                    <a href="#reviews">reviews</a>
+                    <a href="#contact">contact</a>
+                </nav>
+
+            </div>
+        </header>
+        <!--header section ends-->
+
+        <!--bottom navbar-->
+        
+        <nav class="bottom-navbar">
+            <a href="#home" class="fas fa-home"></a>
+            <a href="#featured" class="fas fa-list"></a>
+            <a href="#arrivals" class="fas fa-tags"></a>
+            <a href="#reviews" class="fas fa-comments"></a>
+            <a href="#contact" class="fas fa-blog"></a>
+        </nav>
+
+
+        <!--loging form-->
+        <div class="login-form-container">
+            <div id="close-login-btn" class="fas fa-times"></div>
+            <form id="login-form">
+                <h3>sign in</h3>
+                <span>username</span>
+                <input type="email" name="login_email" class="box" placeholder="enter your email" id="">
+                <span>password</span>
+                <input type="password" name="login_password" class="box" placeholder="enter your password" id="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">remember me</label>
+                </div>
+                <input type="submit" value="sign in" class="btn">
+                <p>forgot password? <a href="#">click here</a></p>
+                <p>don't have an account? <a href="#" id="create-account-link">create one</a></p>
+            </form>
+        
+            <!-- Formulário de Criação de Conta -->
+            <form id="create-account-form" style="display: none;">
+                <h3>Create Account</h3>
+                <span>username</span>
+                <input type="email" name="create_email" class="box" placeholder="enter your email" id="">
+                <span>password</span>
+                <input type="password" name="create_password" class="box" placeholder="enter your password" id="">
+                <input type="submit" value="Create Account" class="btn">
+            </form>
+        </div>
+
+    <!--home section start--> 
+
+        <section class="home" id="home">
+
+            <div class="row">
+
+                <div class="content">
+                    <h3>Check Books</h3>
+                    <p>Or works from previous years</p>
+                    <a href="https://biblioteca.ipcb.pt/" target="_blank" class="btn">Check here</a>
+                </div>
+                <div class="swiper books-slider">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide"> <img src="images/books/book1.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"> <img src="images/books/book2.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"> <img src="images/books/book3.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"> <img src="images/books/book4.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"> <img src="images/books/book2.jpg" alt=""></a>
+                    </div>
+                    <img src="" class="stand"  alt="">
+                </div>
+            </div>
+
+
+        </section>
+
+    <!--home section ends--> 
+
+    <!--icon section starts -->
+    
+        <section class="icons-container">
+
+            <div class="icons">
+                <i class="fas fa-plane"></i>
+            <div class="content">
+                <h3>fast shipping</h3>
+                <p>very fast</p>
+            </div>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>secure</h3>
+                <p>very secure</p>
+            </div>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-redo-alt"></i>
+            <div class="content">
+                <h3>easy return</h3>
+                <p>very eeasy</p>
+            </div>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>lots of support</h3>
+                <p>very support</p>
+            </div>
+            </div>
+
+        </section>
+
+
+    <!--icon section ends -->
+
+    <!--featured section starts-->
+        <section class="featured" id="featured">
+
+            <h1 class="heading"><span>featured books</span></h1>
+
+            <div class="swiper featured-slider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro1');  event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/L'etranger.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>L'étranger</h3>
+                                <p>Autor: Albert Camus</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro2'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/A-la-recherche-du-temps-perdu.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>À la recherche du temps perdu</h3>
+                                <p>Autor: Marcel Proust</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro3'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/Der Prozess.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>Der Prozess</h3>
+                                <p>Autor: Franz Kafka</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro4'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/O-pequeno-príncipe.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>Le Petit Prince</h3>
+                                <p>Autor: Antoine de Saint-Exupéry</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro5'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/Voyage au bout de la nuit.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>Voyage au bout de la nuit</h3>
+                                <p>Autor: Louis-Ferdinand Céline</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro6'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/As Vinhas da Ira.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>The Grapes of Wrath</h3>
+                                <p>Autor: John Steinbeck</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart"onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro7'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/For Whom the Bell Tolls.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>For Whom the Bell Tolls</h3>
+                                <p>Autor: Ernest Hemingway</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro8'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/Le Grand Meaulnes.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>Le Grand Meaulnes</h3>
+                                <p>Autor: Alain-Fournier</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart" onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro9'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/A Espuma dos Dias.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>L'Écume des jours</h3>
+                                <p>Autor: Boris Vian</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search" onclick="event.preventDefault();"></a>
+                            <a href="#" class="fas fa-heart"  onclick="event.preventDefault();"></a>
+                            <a href="#"  class="fas fa-eye" onclick="openModal('livro10'); event.preventDefault();"></a>
+                        </div>
+                        <div class="image">
+                            <img src="images/featured/BraveNewWorld_FirstEdition.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>featured books</h3> </div>
+                            <div class="content">
+                                <h3>Brave New World</h3>
+                                <p>Autor: Aldous Huxley</p>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+
+                </div>
+            </div>
+            <!-- Modal -->
+
+            <div id="myModal" class="modal">
+    <!-- Conteúdo do modal será adicionado via JavaScript -->
+</div>
+        </section>
+
+    <!--featured section ends-->
+
+
+    <!--newsletter sections starts-->
+        <section class="newsletter">
+
+            <form action="">
+                <h3>subscribe for latest news</h3>
+                <input type="email" name="" placeholder="enter your email" id="" class="box">
+                <input type="submit" value="subscribe" class="btn" >
+            </form>
+        </section>
+
+    <!--newsletter sections ends-->
+
+    <!--arrivals sections starts-->
+        <section class="arrivals" id="arrivals">
+
+            <h1 class="heading"> <span> new arrivals</span></h1>
+
+            <div class="swiper arrivals-slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/featured/featured1.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/books/book1.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/books/book3.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/featured/featured6.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+            <div class="swiper arrivals-slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/featured/featured6.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/books/book3.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/featured/featured7.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/featured/featured2.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>new arrivals</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+
+
+            </div>
+
+        </section>
+
+    <!--arrivals sections ends-->
+
+
+    <!--deal section starts-->
+    <section class="deal">
+
+        <div class="content">
+            <h3>Book of the Day</h3>
+            <h1>At veros eos</h1>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+            <a href="#" class="btn">Go to book</a>
+        </div>
+        
+        <div class="image">
+            <img src="images/featured/featured2.jpg" alt="">
+        </div>
+
+    </section>
+
+    <!--deal section ends-->
+
+    <!--reviews section starts-->
+    <section class="reviews" id="reviews">
+        <h1 class="heading"> <span>Some quotes</span></h1>
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+
+
+                <div class="swiper-slide box">
+                    <img src="images/people/nelsonmandela.jpg" alt="">
+                    <h3>Nelson Mandela</h3>
+                    <p><q>The greatest glory in living lies not in never falling, but in rising every time we fall.</q></p>
+                    <div class="rating" data-rating="0">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/people/stevejobs.png" alt="">
+                    <h3>Steve Jobs</h3>
+                    <p><q>Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.</q></p>
+                    <div class="rating" data-rating="0">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/people/Eleanor Roosevelt.png" alt="">
+                    <h3>Eleanor Roosevelt</h3>
+                    <p><q>The future belongs to those who believe in the beauty of their dreams.</q></p>
+                    <div class="rating" data-rating="0">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/people/James Cameron.jpeg" alt="">
+                    <h3>James Cameron</h3>
+                    <p><q>If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.</q></p>
+                    <div class="rating" data-rating="0">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/people/Mahatma Gandhi.png" alt="">
+                    <h3>Mahatma Gandhi</h3>
+                    <p><q>You must be the change you wish to see in the world.</q></p>
+                    <div class="rating" data-rating="0">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/people/Martin Luther King Jr.png" alt="">
+                    <h3>Martin Luther King Jr.</h3>
+                    <p><q>Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that</q></p>
+                    <div class="rating" data-rating="0">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <!--reviews section ends-->
+
+
+    <!-- blog section starts -->
+
+    <section class="blogs" id="blogs">
+        <h1 class="heading"><span>our blogs</span></h1>
+
+        <div class="swiper blogs-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="images/blog/1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Todos os cursos do IPCB</h3>
+                        <p>Todos os cursos do IPCB estão acreditados pelas entidades competentes. 
+                            Para consultar os relatórios de avaliação dos ciclos de estudos conducentes ao grau de licenciado e de mestre pode aceder à página da <a href="https://www.a3es.pt/pt/acreditacao-e-auditoria/resultados-dos-processos-de-acreditacao/acreditacao-de-ciclos-de-estudos">Agência de Avaliação e Acreditação do Ensino Superior (A3ES)</a> .</p>
+                        <a href="https://www.ipcb.pt/ensino" target="_blank" class="btn">read more</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="images/blog/2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Instituto Politécnico de Castelo Branco</h3>
+                        <p>Ler uma breve mensagem do presidente do IPCB</p>
+                        <a href="https://www.ipcb.pt/ipcb/mensagem" target="_blank" class="btn">read more</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="images/blog/3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Observatório de I&D+I</h3>
+                        <p>Documentação de suporte ao Observatório de I&D+I do IPCB</p>
+                        <a href="https://ipcb.pt/observatorio-idi" target="_blank" class="btn">read more</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="images/blog/4.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Newsletter IPCB</h3>
+                        <p>Leia a última newsletter do IPCB</p>
+                        <a href="https://ipcb.pt/newsletter-ipcb" target="_blank" class="btn">read more</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="images/blog/5.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Comissão de Ética</h3>
+                        <p>Leia sobre a comissão de ética do IPCB</p>
+                        <a href="https://ipcb.pt/comissao-de-etica" target="_blank" class="btn">read more</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="images/blog/6.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Bibliotecas do IPCB</h3>
+                        <p>Pode verificar as outras bibliotecas do IPCB</p>
+                        <a href="https://biblioteca.ipcb.pt/" target="_blank" class="btn">read more</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <iframe style="max-width: 100%;" width="560" height="315" src="https://www.youtube.com/embed/h98ksoHdouY?si=WBC-zhrU0ajLFL4D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="content">
+                        <h3>Vem estudar no IPCB</h3>
+                        <p>Take the future in your hands</p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    
+    </section>
+
+
+
+    <!-- blog section ends -->
+
+    <!--footer section starts-->
+        <section class="footer" id="contact">
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>location</h3>
+                    <a href="https://shorturl.at/admpx" target="_blank"><i class="fas fa-map-marker-alt"></i>castelo branco</a>
+                    <a href="https://shorturl.at/amJNW" target="_blank"><i class="fas fa-map-marker-alt"></i>covilha</a>
+                    <a href="https://shorturl.at/tuIPV" target="_blank"><i class="fas fa-map-marker-alt"></i>fundao</a>
+                    <a href="https://shorturl.at/nDRTX" target="_blank"><i class="fas fa-map-marker-alt"></i>sintra</a>
+                    <a href="https://rb.gy/mwiv7v" target="_blank"><i class="fas fa-map-marker-alt"></i>aveiro</a>
+                    <a href="https://shorturl.at/ehkm1" target="_blank"><i class="fas fa-map-marker-alt"></i>sines</a>
+                </div>
+
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#home"><i class="fas fa-arrow-right"></i>home</a>
+                    <a href="#featured"><i class="fas fa-arrow-right"></i>featured</a>
+                    <a href="#arrivals"><i class="fas fa-arrow-right"></i>arrivals</a>
+                    <a href="#reviews"><i class="fas fa-arrow-right"></i>quotes</a>
+                    <a href="#blogs"><i class="fas fa-arrow-right"></i>blogs</a>
+                </div>
+
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#"><i class="fas fa-arrow-right"></i>account info</a>
+                    <a href="#"><i class="fas fa-arrow-right"></i>ordered items</a>
+                    <a href="#"><i class="fas fa-arrow-right"></i>privacy policy</a>
+                    <a href="#"><i class="fas fa-arrow-right"></i>payment methods</a>
+                    <a href="#"><i class="fas fa-arrow-right"></i>our services</a>
+                </div>
+
+                <div class="box">
+                    <h3>contact info </h3>
+                    <a href="#" onclick="event.preventDefault();"><i class="fas fa-phone" onclick="event.preventDefault();"></i>+012 345 678 910</a>
+                    <a href="#" onclick="event.preventDefault();"><i class="fas fa-phone" onclick="event.preventDefault();"></i>+351 123 456 789</a>
+                    <a href="#" onclick="event.preventDefault();"><i class="fas fa-envelope" onclick="event.preventDefault();"></i>bruno.costa3@ipcbcampus.pt</a>
+                    <img src="images/mapa.jpg" class="map" alt="">
+                </div>
+
+            </div>
+
+            <div class="share">
+                <a href="https://www.facebook.com/Lanchoneteestavaescritonasestrelas/?locale=pt_PT" target="_blank" class="fab fa-facebook"></a>
+                <a href="https://twitter.com/home" target="_blank" class="fab fa-x"></a>
+                <a href="https://www.instagram.com/ipcb.pt/" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/bruno-costa-2a3774209/" target="_blank" class="fab fa-linkedin"></a>
+                <a href="https://github.com/BrunomnCosta" class="fab fa-github" target="_blank"></a>
+            </div>
+
+            <div class="credit">Criado por aluno IPCB 1ºano LEI: <span>Bruno Costa</span></div>
+
+
+        </section>
+
+    <!--footer section ends-->
+
+    <!--loader-->
+        <div class="loader-container">
+            <img src="images/loader/book-6447.gif" alt="">
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+        <!--custom js file link-->
+        <script src="js/script.js"></script>
+
+    </body>
+    </html>
